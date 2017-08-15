@@ -1,7 +1,10 @@
-﻿body {
+body {
   font-family: avenir, helvetica, sans-serif;
   background: #8b1d1d;
   color: #a1864a;
+  margin: 0;
+
+  padding: 0;
 }
 
 h1 {
@@ -40,12 +43,14 @@ path, ellipse {
 }
 
 .cap{
-
-    height: 1000px;
+    background: blue;
+    position: relative;
+    height: 1300px;
 }
 .cap svg{
-   
-    position: relative;
+   bottom: auto;
+    position: absolute;
+    top: 0; 
 }
 .cap div{
     display: inline-block;
@@ -54,10 +59,5 @@ path, ellipse {
 }
 .cap ellipse{
   stroke-dashoffset: 1500;
-  stroke-dasharray: 1550;
-}
-
-.cap .path1{
-      stroke-dashoffset: 1600;
-  stroke-dasharray: 1600;
+  stroke-dasharray: 1500;
 }
