@@ -1,0 +1,63 @@
+﻿body {
+  font-family: avenir, helvetica, sans-serif;
+  background: #8b1d1d;
+  color: #a1864a;
+}
+
+h1 {
+  text-align: center;
+  padding-bottom: 50px;
+  font-size: 2.4em;
+  font-weight: 200;
+  letter-spacing: .07em;
+}
+
+svg {
+  position: fixed;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 50%;
+  max-width: 480px;
+  max-height: 340px;
+}
+
+/*.path {
+  stroke-dashoffset: 1000;
+  stroke-dasharray: 1000;
+}*/
+
+.iron {
+  height: 3000px;
+}
+
+
+path, ellipse {
+  stroke-dashoffset: 1000;
+  stroke-dasharray: 1000;
+}
+
+.cap{
+
+    height: 1000px;
+}
+.cap svg{
+   
+    position: relative;
+}
+.cap div{
+    display: inline-block;
+    text-align: center;
+    width: 500px;
+}
+.cap ellipse{
+  stroke-dashoffset: 1500;
+  stroke-dasharray: 1550;
+}
+
+.cap .path1{
+      stroke-dashoffset: 1600;
+  stroke-dasharray: 1600;
+}
