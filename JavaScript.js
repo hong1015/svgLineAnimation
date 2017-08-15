@@ -1,4 +1,4 @@
-﻿$(document).ready(function () {
+$(document).ready(function () {
 
     //var $dashOffset = $("ellipse").css("stroke-dashoffset");
 
@@ -23,7 +23,7 @@
     $dashIEOffset = $(".iron ellipse").css("stroke-dashoffset");
 
     $dashCOffset = $(".cap path").css("stroke-dashoffset");
-    $dashC1Offset = $(".cap .path1").css("stroke-dashoffset");
+
     $dashEOffset = $(".cap ellipse").css("stroke-dashoffset");
 
     //on a scroll event - execute function
@@ -31,7 +31,7 @@
 
      
         //calculate how far down the page the user is 
-        var $percentageComplete = (($(window).scrollTop() / ($("html").height() - $(window).height())) * 100);
+        var $percentageComplete = (($(window).scrollTop() / ($(".iron").height() - $(window).height())) * 100);
 
         //convert dashoffset pixel value to interger
         var $newUnit = parseInt($dashOffset, 10);
@@ -66,23 +66,22 @@
 
         if (windowPos >= divPos && windowPos < (divPos + divHeight)) {
  
-            var $percentageCComplete = ((($(window).scrollTop() - divPos) * ($("html").height() - $(window).height())) / 10000);
+            var $percentageCComplete = ((($(window).scrollTop() - divPos) / ($("html").height() - $(window).height())) *300 + 100);
             $newCUnit = parseInt($dashCOffset, 10);
-            $newC1Unit = parseInt($dashC1Offset, 10);
+          
             $newEUnit = parseInt($dashEOffset, 10);
 
             $offsetCUnit = $percentageCComplete * ($newCUnit / 100);
-            $offsetC1Unit = $percentageCComplete * ($newC1Unit / 100);
+           
             $offsetEUnit = $percentageCComplete * ($newEUnit / 100);
 
             offsetCTot = $newCUnit - $offsetCUnit
-            offsetC1Tot = $newC1Unit - $offsetC1Unit
+         
             offsetCETot = $newEUnit - $offsetEUnit
 
             
-            if (offsetCTot > 1990 && offsetCTot < 3060) {
-               $(".cap path").css("stroke-dashoffset", offsetCTot);
-               $(".cap .path1").css("stroke-dashoffset", offsetC1Tot);
+            if (offsetCTot > 0) {
+               $(".cap path").css("stroke-dashoffset", offsetCTot);            
                 $(".cap ellipse").css("stroke-dashoffset", offsetCETot);
             }
         }
@@ -94,7 +93,8 @@
         wH = $(window).height();
         console.log('window:' + windowPos);
         console.log('math:' + test);
-        console.log(offsetCTot);
+        console.log('iro:' + offsetTot);
+        console.log('capt:' + offsetCTot);
     });
 
 
