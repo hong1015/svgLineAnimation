@@ -1,4 +1,4 @@
-﻿body {
+body {
   font-family: avenir, helvetica, sans-serif;
   background: #8b1d1d;
   color: #a1864a;
@@ -29,7 +29,7 @@ svg {
   stroke-dasharray: 1000;
 }*/
 
-.iron {
+.cap {
   height: 3000px;
 }
 
@@ -39,25 +39,31 @@ path, ellipse {
   stroke-dasharray: 1000;
 }
 
-.cap{
+.iron{
 
     height: 1000px;
 }
-.cap svg{
+.iron svg{
    
     position: relative;
 }
-.cap div{
+/*.iron div{
     display: inline-block;
     text-align: center;
     width: 500px;
 }
-.cap ellipse{
+.iron ellipse{
   stroke-dashoffset: 1500;
   stroke-dasharray: 1550;
 }
 
-.cap .path1{
+.iron .path1{
       stroke-dashoffset: 1600;
   stroke-dasharray: 1600;
+}*/
+
+
+.first{
+     height: 2000px;
+
 }
